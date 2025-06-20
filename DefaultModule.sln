@@ -4,8 +4,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefaultModule", "DefaultMod
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunModule", "RunModule\RunModule.csproj", "{BA58DFD6-5DE2-4BF2-8508-B3413527279C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dockly.ModuleContracts", "Dockly.ModuleContracts\Dockly.ModuleContracts.csproj", "{0AB8A573-5123-4CD0-A47B-34C6CAE0882D}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -20,9 +18,5 @@ Global
 		{BA58DFD6-5DE2-4BF2-8508-B3413527279C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BA58DFD6-5DE2-4BF2-8508-B3413527279C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BA58DFD6-5DE2-4BF2-8508-B3413527279C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{0AB8A573-5123-4CD0-A47B-34C6CAE0882D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0AB8A573-5123-4CD0-A47B-34C6CAE0882D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0AB8A573-5123-4CD0-A47B-34C6CAE0882D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0AB8A573-5123-4CD0-A47B-34C6CAE0882D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

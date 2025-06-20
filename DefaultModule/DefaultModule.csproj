@@ -15,17 +15,12 @@
     <ItemGroup>
       <PackageReference Include="Avalonia" Version="11.3.1" />
       <PackageReference Include="Avalonia.Desktop" Version="11.3.1" />
-    </ItemGroup>
-
-    <ItemGroup>
-      <ProjectReference Include="..\Dockly.ModuleContracts\Dockly.ModuleContracts.csproj" />
+      <PackageReference Include="Dockly.ModuleContracts" Version="1.0.0" />
     </ItemGroup>
 
     <Target Name="CopyDllAfterBuild" AfterTargets="Build">
-   	<MakeDir Directories="$(SolutionDir)OutputModuleDLL" 
-           	Condition="!Exists('$(SolutionDir)OutputModuleDLL')" />
-  	<Copy SourceFiles="$(OutputPath)$(AssemblyName).dll" 
-        	DestinationFolder="$(SolutionDir)OutputModuleDLL" />
+   	<MakeDir Directories="$(SolutionDir)OutputModuleDLL" Condition="!Exists('$(SolutionDir)OutputModuleDLL')" />
+  	<Copy SourceFiles="$(OutputPath)$(AssemblyName).dll" DestinationFolder="$(SolutionDir)OutputModuleDLL" />
     </Target>
 
 </Project>
