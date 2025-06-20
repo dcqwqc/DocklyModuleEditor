@@ -21,4 +21,11 @@
       <ProjectReference Include="..\Dockly.ModuleContracts\Dockly.ModuleContracts.csproj" />
     </ItemGroup>
 
+    <Target Name="CopyDllAfterBuild" AfterTargets="Build">
+   	<MakeDir Directories="$(SolutionDir)OutputModuleDLL" 
+           	Condition="!Exists('$(SolutionDir)OutputModuleDLL')" />
+  	<Copy SourceFiles="$(OutputPath)$(AssemblyName).dll" 
+        	DestinationFolder="$(SolutionDir)OutputModuleDLL" />
+    </Target>
+
 </Project>
