@@ -1,16 +1,27 @@
 using Avalonia.Controls;
 using Dockly.ModuleContracts;
+
 namespace Dockly.Modules
 {
-    public partial class DefaultModuleControl  : UserControl, IModule
+    public partial class DefaultModuleControl : UserControl, IModule
     {
-        public string ModuleName => "My External Module";
+        // Identification
+        public string Id => "DefaultModule";
+        public string ModuleName => "Default Module";
         public string ModuleVersion => "1.0.0";
-    
-        // Specify the Module size!
-        public int PreferredTileWidth => 2;  // 2x2 tiles
-        public int PreferredTileHeight => 2; // 2x2 tiles
-        public DefaultModuleControl ()
+        public string Category => "Default";
+        public string[] Tags => new string[] { "Default", "example" };
+
+        // Layout info
+        public int TileWidth => 2;
+        public int TileHeight => 2;
+
+        // Compatibility
+        public string MinAppVersion => "1.0.0";
+        public string MaxAppVersion => "2.0.0";
+        public string[] SupportedPlatforms => new string[] { "Windows", "Linux", "Mac" };
+
+        public DefaultModuleControl()
         {
             InitializeComponent();
         }
