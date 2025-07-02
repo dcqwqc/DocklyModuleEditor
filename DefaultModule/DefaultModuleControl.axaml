@@ -3,7 +3,7 @@
              x:Class="Docklys.Modules.DefaultModuleControl">
     <Border Background="Purple" Padding="20" Height="230" Width="230" CornerRadius="10">
         <StackPanel>
-            <TextBlock Text="Pruple DLL Module" FontSize="18" FontWeight="Bold"/>
+            <TextBlock Text="Test TextBlock" FontSize="18" FontWeight="Bold"/>
             <Button Name="TestButton" Content="Test Button" Width="100"/>
         </StackPanel>
     </Border>

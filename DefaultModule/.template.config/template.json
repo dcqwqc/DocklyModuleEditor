@@ -1,14 +1,14 @@
 {
   "$schema": "http://json.schemastore.org/template",
-  "author": "Docklys Developer",
+  "author": "qwqc",
   "classifications": ["Avalonia", "Module", "Library", "Docklys"],
-  "identity": "Dockly.AvaloniaModule.Template",
-  "name": "Dockly Avalonia Module",
-  "shortName": "docklymodule",
-  "description": "A template for creating Docklys modules with custom properties",
+  "identity": "Docklys.Module.Template",
+  "name": "Docklys Module",
+  "shortName": "docklysmodule",
+  "description": "A template for creating Docklys modules with IModule interface",
   "tags": {
     "language": "C#",
-    "type": "project"
+    "type": "Docklys Module"
   },
   "sourceName": "DefaultModule",
   "preferNameDirectory": true,
@@ -18,14 +18,14 @@
       "datatype": "string",
       "replaces": "DefaultModule",
       "defaultValue": "MyModule",
-      "description": "The name of the module (used for class names and IDs)"
+      "description": "The name of the module (used for class names)"
     },
     "ModuleDisplayName": {
       "type": "parameter",
       "datatype": "string",
       "replaces": "Default Module",
       "defaultValue": "My Module",
-      "description": "The display name of the module"
+      "description": "The display name of the module (IModule.ModuleName)"
     },
     "ModuleColor": {
       "type": "parameter",
@@ -34,19 +34,12 @@
       "defaultValue": "Blue",
       "description": "Background color of the module"
     },
-    "ModuleCategory": {
-      "type": "parameter",
-      "datatype": "string",
-      "replaces": "Default",
-      "defaultValue": "Custom",
-      "description": "Category of the module"
-    },
     "ModuleId": {
       "type": "parameter",
       "datatype": "string",
       "replaces": "BlackModule",
       "defaultValue": "CustomModule",
-      "description": "Unique identifier for the module"
+      "description": "Unique identifier for the module (IModule.Id)"
     },
     "ModuleDescription": {
       "type": "parameter",
@@ -54,6 +47,116 @@
       "replaces": "Pruple DLL Module",
       "defaultValue": "Custom DLL Module",
       "description": "Description text shown in the module"
+    },
+    "ModuleVersion": {
+      "type": "parameter",
+      "datatype": "string",
+      "replaces": "1.0.0",
+      "defaultValue": "1.0.0",
+      "description": "Version of the module (IModule.ModuleVersion)"
+    },
+    "ModuleCategory": {
+      "type": "parameter",
+      "datatype": "string",
+      "replaces": "Default",
+      "defaultValue": "Custom",
+      "description": "Category of the module (IModule.Category)"
+    },
+    "ModuleTags": {
+      "type": "parameter",
+      "datatype": "string",
+      "replaces": "DefaultModule\", \"example",
+      "defaultValue": "CustomModule\", \"utility",
+      "description": "Comma-separated tags for the module (IModule.Tags)"
+    },
+    "TileWidth": {
+      "type": "parameter",
+      "datatype": "int",
+      "replaces": "2",
+      "defaultValue": "2",
+      "description": "Tile width in grid units (IModule.TileWidth)"
+    },
+    "TileHeight": {
+      "type": "parameter",
+      "datatype": "int",
+      "replaces": "2",
+      "defaultValue": "2",
+      "description": "Tile height in grid units (IModule.TileHeight)"
+    },
+    "MinAppVersion": {
+      "type": "parameter",
+      "datatype": "string",
+      "replaces": "1.0.0",
+      "defaultValue": "1.0.0",
+      "description": "Minimum app version required (IModule.MinAppVersion)"
+    },
+    "MaxAppVersion": {
+      "type": "parameter",
+      "datatype": "string",
+      "replaces": "2.0.0",
+      "defaultValue": "2.0.0",
+      "description": "Maximum app version supported (IModule.MaxAppVersion)"
+    },
+    "SupportedPlatforms": {
+      "type": "parameter",
+      "datatype": "string",
+      "replaces": "Windows\", \"Linux\", \"Mac",
+      "defaultValue": "Windows\", \"Linux\", \"Mac",
+      "description": "Supported platforms (IModule.SupportedPlatforms)"
+    },
+    "CalculatedWidth": {
+      "type": "generated",
+      "generator": "switch",
+      "parameters": {
+        "evaluator": "C++",
+        "datatype": "string",
+        "cases": [
+          {
+            "condition": "(TileWidth == 1)",
+            "value": "230"
+          },
+          {
+            "condition": "(TileWidth == 2)",
+            "value": "350"
+          },
+          {
+            "condition": "(TileWidth == 3)",
+            "value": "470"
+          },
+          {
+            "condition": "(TileWidth == 4)",
+            "value": "590"
+          }
+        ]
+      },
+      "replaces": "230"
+    },
+    "CalculatedHeight": {
+      "type": "generated",
+      "generator": "switch", 
+      "parameters": {
+        "evaluator": "C++",
+        "datatype": "string",
+        "cases": [
+          {
+            "condition": "(TileHeight == 1)",
+            "value": "230"
+          },
+          {
+            "condition": "(TileHeight == 2)",
+            "value": "350"
+          },
+          {
+            "condition": "(TileHeight == 3)",
+            "value": "470"
+          },
+          {
+            "condition": "(TileHeight == 4)",
+            "value": "590"
+          }
+        ]
+      },
+      "replaces": "230"
     }
   },
   "primaryOutputs": [
