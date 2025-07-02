@@ -65,14 +65,14 @@
     "TileWidth": {
       "type": "parameter",
       "datatype": "int",
-      "replaces": "2",
+      "replaces": "4",
       "defaultValue": "2",
       "description": "Tile width in grid units (IModule.TileWidth)"
     },
     "TileHeight": {
       "type": "parameter",
       "datatype": "int",
-      "replaces": "2",
+      "replaces": "8",
       "defaultValue": "2",
       "description": "Tile height in grid units (IModule.TileHeight)"
     },
@@ -97,7 +97,7 @@
       "defaultValue": "[\"Windows\", \"Linux\", \"Mac\"]",
       "description": "Supported platforms (IModule.SupportedPlatforms)"
     },
-    "CalculatedWidth": {
+"CalculatedWidth": {
       "type": "generated",
       "generator": "switch",
       "parameters": {
@@ -126,7 +126,7 @@
           { "condition": "(TileWidth == 20)", "value": "2390" }
         ]
       },
-      "replaces": "230"
+      "replaces": "470"
     },
     "CalculatedHeight": {
       "type": "generated",
@@ -157,8 +157,9 @@
           { "condition": "(TileHeight == 20)", "value": "2390" }
         ]
       },
-      "replaces": "110"
+      "replaces": "950"
     }
+
   },
   "modifiers": [
     {

@@ -13,8 +13,8 @@ namespace DefaultModule
         public string[] Tags => new [] { "DefaultModule", "example" };
 
         // Layout info
-        public int TileWidth => 2;
-        public int TileHeight => 2;
+        public int TileWidth => 4;
+        public int TileHeight => 8;
 
         // Compatibility
         public string MinAppVersion => "1.0.0";
