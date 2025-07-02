@@ -5,7 +5,7 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
     <ItemGroup>
-      <Compile Update="DefaultModuleControl.axaml.cs">
+      <Compile Update="DefaultModule.axaml.cs">
         <DependentUpon>DefaultModuleControl.axaml</DependentUpon>
       </Compile>
     </ItemGroup>

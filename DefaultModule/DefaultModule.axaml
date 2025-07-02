@@ -1,9 +1,9 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             x:Class="Docklys.Modules.DefaultModuleControl">
+             x:Class="DefaultModule.DefaultModule">
     <Border Background="Purple" Padding="20" Height="230" Width="230" CornerRadius="10">
         <StackPanel>
-            <TextBlock Text="Pruple DLL Module" FontSize="18" FontWeight="Bold"/>
+            <TextBlock Text="Purple DLL Module" FontSize="18" FontWeight="Bold"/>
             <Button Name="TestButton" Content="Test Button" Width="100"/>
         </StackPanel>
     </Border>

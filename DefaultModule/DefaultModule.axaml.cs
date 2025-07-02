@@ -1,16 +1,16 @@
 using Avalonia.Controls;
 using Docklys.ModuleContracts;
 
-namespace Docklys.Modules
+namespace DefaultModule
 {
-    public partial class DefaultModuleControl : UserControl, IModule
+    public class DefaultModule : UserControl, IModule
     {
         // Identification
         public string Id => "BlackModule";
         public string ModuleName => "Default Module";
         public string ModuleVersion => "1.0.0";
         public string Category => "Default";
-        public string[] Tags => new string[] { "DefaultModule", "example" };
+        public string[] Tags => new [] { "DefaultModule", "example" };
 
         // Layout info
         public int TileWidth => 2;
@@ -19,9 +19,9 @@ namespace Docklys.Modules
         // Compatibility
         public string MinAppVersion => "1.0.0";
         public string MaxAppVersion => "2.0.0";
-        public string[] SupportedPlatforms => new string[] { "Windows", "Linux", "Mac" };
+        public string[] SupportedPlatforms => new [] { "Windows", "Linux", "Mac" };
 
-        public DefaultModuleControl()
+        public DefaultModule()
         {
             InitializeComponent();
         }
