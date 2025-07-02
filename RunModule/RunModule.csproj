@@ -21,6 +21,6 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\DefaultModule\DefaultModule.csproj" />
+        <ProjectReference Include="..\DefaultModule\DefaultModule.csproj" />
     </ItemGroup>
 </Project>

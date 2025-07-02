@@ -1,4 +1,4 @@
-﻿namespace Dockly.ModuleContracts
+﻿namespace Docklys.ModuleContracts
 {
     public interface IModule
     {

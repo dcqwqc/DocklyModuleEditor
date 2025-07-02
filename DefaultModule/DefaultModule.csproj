@@ -1,26 +1,24 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
     <PropertyGroup>
         <TargetFramework>net9.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
     </PropertyGroup>
-
     <ItemGroup>
-      <Compile Update="DefaultModule.axaml.cs">
-        <DependentUpon>DefaultModule.axaml</DependentUpon>
+      <Compile Update="DefaultModuleControl.axaml.cs">
+        <DependentUpon>DefaultModuleControl.axaml</DependentUpon>
       </Compile>
     </ItemGroup>
-
     <ItemGroup>
       <PackageReference Include="Avalonia" Version="11.3.1" />
       <PackageReference Include="Avalonia.Desktop" Version="11.3.1" />
-      <PackageReference Include="Dockly.ModuleContracts" Version="1.0.0" />
+      <PackageReference Include="Docklys.ModuleContracts" Version="1.0.0" />
     </ItemGroup>
-
+    <ItemGroup>
+      <ProjectReference Include="..\Docklys.ModuleContracts\Docklys.ModuleContracts.csproj" />
+    </ItemGroup>
     <Target Name="CopyDllAfterBuild" AfterTargets="Build">
    	<MakeDir Directories="$(SolutionDir)OutputModuleDLL" Condition="!Exists('$(SolutionDir)OutputModuleDLL')" />
   	<Copy SourceFiles="$(OutputPath)$(AssemblyName).dll" DestinationFolder="$(SolutionDir)OutputModuleDLL" />
     </Target>
-
 </Project>

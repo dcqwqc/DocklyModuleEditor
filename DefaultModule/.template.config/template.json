@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json.schemastore.org/template",
+  "author": "Docklys Developer",
+  "classifications": ["Avalonia", "Module", "Library", "Docklys"],
+  "identity": "Dockly.AvaloniaModule.Template",
+  "name": "Dockly Avalonia Module",
+  "shortName": "docklymodule",
+  "description": "A template for creating Docklys modules with custom properties",
+  "tags": {
+    "language": "C#",
+    "type": "project"
+  },
+  "sourceName": "DefaultModule",
+  "preferNameDirectory": true,
+  "symbols": {
+    "ModuleName": {
+      "type": "parameter",
+      "datatype": "string",
+      "replaces": "DefaultModule",
+      "defaultValue": "MyModule",
+      "description": "The name of the module (used for class names and IDs)"
+    },
+    "ModuleDisplayName": {
+      "type": "parameter",
+      "datatype": "string",
+      "replaces": "Default Module",
+      "defaultValue": "My Module",
+      "description": "The display name of the module"
+    },
+    "ModuleColor": {
+      "type": "parameter",
+      "datatype": "string",
+      "replaces": "Purple",
+      "defaultValue": "Blue",
+      "description": "Background color of the module"
+    },
+    "ModuleCategory": {
+      "type": "parameter",
+      "datatype": "string",
+      "replaces": "Default",
+      "defaultValue": "Custom",
+      "description": "Category of the module"
+    },
+    "ModuleId": {
+      "type": "parameter",
+      "datatype": "string",
+      "replaces": "BlackModule",
+      "defaultValue": "CustomModule",
+      "description": "Unique identifier for the module"
+    },
+    "ModuleDescription": {
+      "type": "parameter",
+      "datatype": "string",
+      "replaces": "Pruple DLL Module",
+      "defaultValue": "Custom DLL Module",
+      "description": "Description text shown in the module"
+    }
+  },
+  "primaryOutputs": [
+    {
+      "path": "DefaultModuleControl.cs"
+    },
+    {
+      "path": "DefaultModuleControl.axaml"
+    },
+    {
+      "path": "DefaultModule.csproj"
+    }
+  ]
+}

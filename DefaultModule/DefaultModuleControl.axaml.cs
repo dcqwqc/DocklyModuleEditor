@@ -1,16 +1,16 @@
 using Avalonia.Controls;
-using Dockly.ModuleContracts;
+using Docklys.ModuleContracts;
 
-namespace Dockly.Modules
+namespace Docklys.Modules
 {
     public partial class DefaultModuleControl : UserControl, IModule
     {
         // Identification
-        public string Id => "DefaultModule";
+        public string Id => "BlackModule";
         public string ModuleName => "Default Module";
         public string ModuleVersion => "1.0.0";
         public string Category => "Default";
-        public string[] Tags => new string[] { "Default", "example" };
+        public string[] Tags => new string[] { "DefaultModule", "example" };
 
         // Layout info
         public int TileWidth => 2;
