@@ -37,7 +37,7 @@
     "ModuleDescription": {
       "type": "parameter",
       "datatype": "string",
-      "replaces": "Pruple DLL Module",
+      "replaces": "Purple DLL Module",
       "defaultValue": "Custom DLL Module",
       "description": "Description text shown in the module"
     },
@@ -58,8 +58,8 @@
     "ModuleTags": {
       "type": "parameter",
       "datatype": "string",
-      "replaces": "DefaultModule\", \"example",
-      "defaultValue": "CustomModule\", \"utility",
+      "replaces": "[\"DefaultModule\", \"example\"]",
+      "defaultValue": "[\"CustomModule\", \"utility\"]",
       "description": "Comma-separated tags for the module (IModule.Tags)"
     },
     "TileWidth": {
@@ -93,8 +93,8 @@
     "SupportedPlatforms": {
       "type": "parameter",
       "datatype": "string",
-      "replaces": "Windows\", \"Linux\", \"Mac",
-      "defaultValue": "Windows\", \"Linux\", \"Mac",
+      "replaces": "[\"Windows\", \"Linux\", \"Mac\"]",
+      "defaultValue": "[\"Windows\", \"Linux\", \"Mac\"]",
       "description": "Supported platforms (IModule.SupportedPlatforms)"
     },
     "CalculatedWidth": {
@@ -157,7 +157,7 @@
           { "condition": "(TileHeight == 20)", "value": "2390" }
         ]
       },
-      "replaces": "230"
+      "replaces": "110"
     }
   },
   "modifiers": [

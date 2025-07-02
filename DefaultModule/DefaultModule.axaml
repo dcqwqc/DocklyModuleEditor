@@ -1,7 +1,7 @@
 <UserControl xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              x:Class="DefaultModule.DefaultModule">
-    <Border Background="Purple" Padding="20" Height="230" Width="230" CornerRadius="10">
+    <Border Background="Purple" Padding="20" Height="110" Width="230" CornerRadius="10">
         <StackPanel>
             <TextBlock Text="Purple DLL Module" FontSize="18" FontWeight="Bold"/>
             <Button Name="TestButton" Content="Test Button" Width="100"/>

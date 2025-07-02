@@ -3,7 +3,7 @@ using Docklys.ModuleContracts;
 
 namespace DefaultModule
 {
-    public class DefaultModule : UserControl, IModule
+    public partial class DefaultModule : UserControl, IModule
     {
         // Identification
         public string Id => "BlackModule";
