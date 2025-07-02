@@ -6,20 +6,20 @@ namespace Docklys.Modules
     public partial class DefaultModuleControl : UserControl, IModule
     {
         // Identification
-        public string Id => "ModuleId";
-        public string ModuleName => "ModuleDisplayName";
-        public string ModuleVersion => "ModuleVersion";
-        public string Category => "ModuleCategory";
-        public string[] Tags => new string[] { "ModuleTags" };
+        public string Id => "BlackModule";
+        public string ModuleName => "Default Module";
+        public string ModuleVersion => "1.0.0";
+        public string Category => "Default";
+        public string[] Tags => new string[] { "DefaultModule", "example" };
 
         // Layout info
-        public int TileWidth => TileWidth;
-        public int TileHeight => TileHeight;
+        public int TileWidth => 2;
+        public int TileHeight => 2;
 
         // Compatibility
-        public string MinAppVersion => "MinAppVersion";
-        public string MaxAppVersion => "MaxAppVersion";
-        public string[] SupportedPlatforms => new string[] { "SupportedPlatforms" };
+        public string MinAppVersion => "1.0.0";
+        public string MaxAppVersion => "2.0.0";
+        public string[] SupportedPlatforms => new string[] { "Windows", "Linux", "Mac" };
 
         public DefaultModuleControl()
         {
