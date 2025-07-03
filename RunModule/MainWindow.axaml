@@ -5,8 +5,17 @@
         xmlns:DefaultModule="clr-namespace:DefaultModule;assembly=DefaultModule"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="RunModule.MainWindow"
-        Title="RunModule">
-    <Grid>
-        <DefaultModule:DefaultModule />
+        Title="RunModule"
+        SizeToContent="Manual"
+        WindowStartupLocation="Manual">
+    <Grid RowDefinitions="*, Auto">
+        <DefaultModule:DefaultModule Name="ModuleControl" Grid.Row="0" />
+        <Button Grid.Row="1" 
+                Content="Save as WebP"
+                HorizontalAlignment="Center"
+                Margin="0,10"
+                Foreground="White"
+                Click="CaptureToWebP_Click"
+                ToolTip.Tip="Ensure module is visible and at proper scale (scale should be correct if RunModule code is unchanged)"/>
     </Grid>
 </Window>
