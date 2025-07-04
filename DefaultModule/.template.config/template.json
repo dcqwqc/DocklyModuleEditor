@@ -58,9 +58,9 @@
     "ModuleTags": {
       "type": "parameter",
       "datatype": "string",
-      "replaces": "[\"DefaultModule\", \"example\"]",
-      "defaultValue": "[\"CustomModule\", \"utility\"]",
-      "description": "Comma-separated tags for the module (IModule.Tags)"
+      "replaces": "DefaultModule, example",
+      "defaultValue": "CustomModule, utility",
+      "description": "Comma-separated tags for the module (IModule.Tags). Example: tag1, tag2, tag3"
     },
     "TileWidth": {
       "type": "parameter",
@@ -92,12 +92,32 @@
     },
     "SupportedPlatforms": {
       "type": "parameter",
-      "datatype": "string",
-      "replaces": "[\"Windows\", \"Linux\", \"Mac\"]",
-      "defaultValue": "[\"Windows\", \"Linux\", \"Mac\"]",
-      "description": "Supported platforms (IModule.SupportedPlatforms)"
+      "datatype": "choice",
+      "choices": [
+        { "choice": "Windows", "displayName": "Windows" },
+        { "choice": "Linux", "displayName": "Linux" },
+        { "choice": "Mac", "displayName": "Mac" }
+      ],
+      "defaultValue": ["Windows", "Linux", "Mac"],
+      "description": "Supported platforms (IModule.SupportedPlatforms)",
+      "allowMultipleValues": true,
+      "replaces": "Windows\", \"Linux\", \"Mac"
     },
-"CalculatedWidth": {
+    "ProcessedTags": {
+      "type": "generated",
+      "generator": "regex",
+      "parameters": {
+        "source": "ModuleTags",
+        "steps": [
+          {
+            "regex": "\\s*,\\s*",
+            "replacement": "\", \""
+          }
+        ]
+      },
+      "replaces": "DefaultModule\", \"example"
+    },
+    "CalculatedWidth": {
       "type": "generated",
       "generator": "switch",
       "parameters": {
@@ -130,7 +150,7 @@
     },
     "CalculatedHeight": {
       "type": "generated",
-      "generator": "switch", 
+      "generator": "switch",
       "parameters": {
         "evaluator": "C++",
         "datatype": "string",
@@ -159,7 +179,6 @@
       },
       "replaces": "950"
     }
-
   },
   "modifiers": [
     {
