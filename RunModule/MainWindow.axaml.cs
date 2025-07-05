@@ -26,6 +26,7 @@ public partial class MainWindow : Window
         // Auto-size window to fit module content
         AutoSizeWindow();
         Console.WriteLine(typeof(IModule.FontDummy).Assembly.GetName().Name);
+
     }
 
     private void AutoSizeWindow()
