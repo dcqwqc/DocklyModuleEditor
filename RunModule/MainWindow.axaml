@@ -2,14 +2,14 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:DefaultModule="clr-namespace:DefaultModule;assembly=DefaultModule"
+        xmlns:VolumeMixer="clr-namespace:VolumeMixer;assembly=VolumeMixer"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="RunModule.MainWindow"
         Title="RunModule"
         SizeToContent="Manual"
         WindowStartupLocation="Manual">
     <Grid RowDefinitions="*, Auto">
-        <DefaultModule:DefaultModule Name="ModuleControl" Grid.Row="0" />
+        <VolumeMixer:VolumeMixer Name="ModuleControl" Grid.Row="0" />
         <Button Grid.Row="1" 
                 Content="Save as WebP"
                 HorizontalAlignment="Center"

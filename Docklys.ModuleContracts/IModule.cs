@@ -7,5 +7,8 @@
         
         int PreferredTileWidth => 1;
         int PreferredTileHeight => 1;
+        public class FontDummy
+        {
+        }
     }
 }

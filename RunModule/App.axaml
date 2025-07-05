@@ -3,7 +3,7 @@
              x:Class="RunModule.App"
              xmlns:semi="https://irihi.tech/semi"
              RequestedThemeVariant="Default">
-             <!-- "Default" ThemeVariant fsollows system theme variant. "Dark" or "Light" are other available options. -->
+             <!-- "Default" ThemeVariant follows system theme variant. "Dark" or "Light" are other available options. -->
              <Application.Resources>
                  <SolidColorBrush x:Key="ColorBackground" Color="#d1dbd2"/>
                  <SolidColorBrush x:Key="ColorModuleBackground" Color="#afb5af"/>
@@ -12,10 +12,9 @@
                  <SolidColorBrush x:Key="ColorFont" Color="#4b5a52"/>
                  <SolidColorBrush x:Key="ColorAccent" Color="#202723"/>
                  <SolidColorBrush x:Key="ColorGray" Color="#586960"/>
-                 <SolidColorBrush x:Key="ColorKnob" Color="#9daea4"/>
+                 <Color x:Key="ColorModuleAccentColor">White</Color>
                  <SolidColorBrush x:Key="ColorModuleColor" Color="#9daea4"/>
-
-                 <FontFamily x:Key="PixelFont">avares://RunModule/Assets/Fonts/PressStart2P-Regular.ttf#Press Start 2P</FontFamily>
+                 
              </Application.Resources>
     <Application.Styles>
         <FluentTheme />
